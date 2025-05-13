@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import { Reveal } from "../Reveal";
+import Logo from "@assets/logo.png";
+import { footerData, footerSocialNetworks } from "./Footer.data";
+import { RiFacebookCircleFill, RiInstagramLine, RiLinkedinBoxFill, RiTwitterXFill } from "react-icons/ri";
+const iconComponents = { RiInstagramLine, RiFacebookCircleFill, RiTwitterXFill, RiLinkedinBoxFill };
+
+---
+
+<div class="max-w-5xl p-4 md:pt-40 mx-auto">
+    <div class="justify-between md:flex">
+        <div>
+            <Image src={Logo} width={200} height={40} alt="Logo Bank" />
+            <Reveal client:visible>
+                <p class="mt-5 text-primaryDark max-w-[250px]">
+                    Una nueva forma de hacer pagos de forma sencilla
+                </p>
+            </Reveal>
+        </div>
+        {
+            footerData.map(({ id, title, links }) => (
+                <div>
+                    <h4 class="mt-8 text-lg md:mt-0">
+                        <Reveal client:visible>{title}</Reveal>
+                    </h4>
+                    {links.map(({ id, name, link }) => (
+                        <a
+                            href={link}
+                            class="block mt-4 text-primaryDark hover:text-white"
+                        >
+                            <Reveal client:visible>{name}</Reveal>
+                        </a>
+                    ))}
+                </div>
+            ))
+        }
+    </div>
+
+    <div class="border-[#3F3E45] border-[1px] my-7"></div>
+
+    <div class="items-center justify-between md:flex">
+        <div class="my-3">
+            <Reveal client:visible>
+                2025 Juan Salvador. All Rights Reserved.
+            </Reveal>
+        </div>
+        <div class="flex gap-5">
+            {
+                footerSocialNetworks.map(({ id, icon: Icon, link }) => (
+                    <a href={link} class="text-2xl">
+                        <Icon />
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</div>
