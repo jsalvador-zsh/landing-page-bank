@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BestBusiness from '@components/BestBusiness/BestBusiness.astro';
+import ChooseYourCards from '@components/ChooseYourCards/ChooseYourCards.astro';
+import ControlBilling from '@components/ControlBilling/ControlBilling.astro';
+import CounterData from '@components/CounterData/CounterData.astro';
+import FirstBlock from '@components/FirstBlock/FirstBlock.astro';
+import Header from '@components/Header/Header.astro';
+import PaymentMethods from '@components/PaymentMethods/PaymentMethods.astro';
+import Testimonials from '@components/Testimonials/Testimonials.astro';
+import Layout from '@layouts/Layout.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Bank Website | Dev" description="Bank Website">
+    <Header />
+    <FirstBlock />
+    <CounterData />
+    <BestBusiness />
+    <ChooseYourCards />
+    <ControlBilling />
+    <Testimonials />
+    <PaymentMethods />
 </Layout>

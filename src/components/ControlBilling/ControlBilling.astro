@@ -1,0 +1,29 @@
+---
+import MotionTransition from "@components/MotionTransition/MotionTransition";
+import { Image } from "astro:assets";
+import ControlBus from "@assets/control-business.png";
+import { Reveal } from "@components/Reveal";
+---
+
+<div class="p-4 py-20 md:py-40">
+    <div class="flex flex-col-reverse items-center max-w-5xl mx-auto md:flex-row place-content-evenly">
+        <MotionTransition client:visible className="flex-1 md:p-8">
+            <div>
+                <Image src={ControlBus} alt="Control business" width={580} height={411} class="w-full h-auto"/>
+            </div>
+        </MotionTransition>
+        <div class="flex-1 md:p-8">
+            <Reveal client:visible>
+                <h2 class="text-5xl font-semibold">
+                    Controla fácilmente
+                    <span class="block degradedBlue bg-gradient-to-r from-sky-300 to-sky-600">
+                      tu facturación
+                    </span>
+                  </h2>
+            </Reveal>
+            <Reveal client:visible>
+                <p class="max-w-md mt-10">Con la tarjeta de crédito adecuada, puede financiar generando crédito, obteniendo recompensas y ahorrando dinero. Pero con cientos de tarjetas de crédito en el mercado.</p>
+            </Reveal>
+        </div>
+    </div>
+</div>

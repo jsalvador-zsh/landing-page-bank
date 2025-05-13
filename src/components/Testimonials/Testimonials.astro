@@ -1,0 +1,25 @@
+---
+import BackgroundRadialLeft from "@components/BackgroundRadial/BackgroundRadialLeft.astro";
+import { Reveal } from "@components/Reveal";
+import SlideTestimonials  from "@components/Testimonials/Slide/Slide.astro"
+---
+
+<div class="relative p-4 md:py-40" id="testimonios">
+    <BackgroundRadialLeft />
+    <div class="grid max-w-5xl gap-8 mx-auto my-6 md:grid-cols-2 items-center">
+        <Reveal client:visible>
+            <h2 class="text-5xl font-semibold">
+                ¿Qué dicen los clientes
+                <span class="block degradedBlue bg-gradient-to-r from-sky-300 to-sky-600">
+                  de nosotros?
+                </span>
+              </h2>
+        </Reveal>
+        <Reveal client:visible>
+            <div class="self-center">
+                <p>Todo lo que necesitas para aceptar pagos y crecer tu negocio en cualquier parte del mundo.</p>
+            </div>
+        </Reveal>
+    </div>
+    <SlideTestimonials />
+</div>

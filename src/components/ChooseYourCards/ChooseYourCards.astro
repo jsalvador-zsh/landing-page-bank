@@ -1,0 +1,28 @@
+---
+import BackgroundRadialRight from "@components/BackgroundRadial/BackgroundRadialRight.astro";
+import CardSwiper from "./ChooseYourCards";
+import { Reveal } from "@components/Reveal";
+import { dataCards } from "./ChooseYourCards.data";
+import MotionTransition from "@components/MotionTransition/MotionTransition";
+---
+
+<div class="relative p-4 py-20 md:py-40" id="tarjetas">
+  <BackgroundRadialRight />
+
+  <div class="block max-w-5xl mx-auto md:grid md:grid-cols-2">
+    <Reveal client:visible>
+      <h2 class="text-5xl font-semibold">
+        Elige la tarjeta que más
+        <span class="block degradedBlue bg-gradient-to-r from-sky-300 to-sky-600">
+          se adapte a tus necesidades
+        </span>
+      </h2>
+    </Reveal>
+
+    <div class="px-5">
+      <MotionTransition client:visible>
+        <CardSwiper client:visible images={dataCards.map(d => d.image)} />
+      </MotionTransition>
+    </div>
+  </div>
+</div>

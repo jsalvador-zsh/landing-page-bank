@@ -1,0 +1,10 @@
+---
+import CtaDark from "@components/CtaDark/CtaDark.astro";
+import { PaymentMethodsSection } from "./PaymentMethods";
+import BackgroundRadialRight from "@components/BackgroundRadial/BackgroundRadialRight.astro";
+---
+<div class="relative p-4 py-20 md:py-40" id="servicios">
+    <BackgroundRadialRight />
+    <PaymentMethodsSection client:visible/>
+    <CtaDark />
+</div>

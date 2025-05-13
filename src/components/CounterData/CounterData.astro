@@ -1,0 +1,55 @@
+---
+import { dataCounter } from "./CounterData.data";
+import MotionTransition from "@components/MotionTransition/MotionTransition";
+---
+
+<MotionTransition className="max-w-5xl p-4 py-10 mx-auto md:py-40" client:visible>
+  <div class="justify-between md:flex">
+    {dataCounter.map(({ id, endNumber, text }) => (
+      <div class="py-5 text-2xl text-center">
+        +
+        <span class="counter-number" data-end={endNumber}>0</span>
+        <span class="block degradedBlue bg-gradient-to-r from-sky-300 to-sky-600">{text}</span>
+      </div>
+    ))}
+  </div>
+</MotionTransition>
+
+<script is:inline>
+document.addEventListener('DOMContentLoaded', () => {
+  const counterElements = document.querySelectorAll('.counter-number');
+  
+  const animateCounter = (element, target) => {
+    const duration = 3000; // 3 segundos
+    const start = 0;
+    const increment = target / (duration / 16); // ~60fps
+    
+    let current = start;
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        element.textContent = Math.floor(current).toLocaleString();
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target.toLocaleString();
+      }
+    };
+    
+    updateCounter();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = +entry.target.dataset.end;
+        animateCounter(entry.target, target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counterElements.forEach(counter => {
+    observer.observe(counter);
+  });
+});
+</script>
