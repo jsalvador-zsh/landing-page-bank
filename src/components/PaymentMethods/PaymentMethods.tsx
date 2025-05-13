@@ -19,9 +19,7 @@ export function PaymentMethodsSection() {
                     delay: 1,
                     disableOnInteraction: false
                 },
-                loop: true,
                 loopAdditionalSlides: dataPaymentMethods.length,
-
                 grabCursor: true,
                 speed: 3000
             });
