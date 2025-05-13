@@ -1,48 +1,81 @@
-# Astro Starter Kit: Basics
+# Landing Page Bank - Moderna y Dinámica
 
-```sh
-bun create astro@latest -- --template basics
-```
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tu-usuario/tu-repo)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/tu-usuario/tu-repo)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+<img src="public/image.png" alt="Landing Page Bank" width="800"/>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Una landing page moderna para servicios bancarios, con animaciones fluidas y diseño responsive, construida con:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- ⚡️ Astro para rendimiento óptimo
+- 🎨 Tailwind CSS para estilos
+- 🚀 React para componentes interactivos
+- ✨ Framer Motion y Swiper para animaciones
+- 🏗 TypeScript para tipado seguro
+- ⚡ Bun como runtime y gestor de paquetes
 
-## 🚀 Project Structure
+## 🚀 Características Principales
 
-Inside of your Astro project, you'll see the following folders and files:
+- Diseño moderno y atractivo
+- Responsive
+- Animaciones con Framer Motion
+- Carrusel interactivo con Swiper
+- Despliegue con Vercel
+- Optimizado para SEO y rendimiento
+
+## 🏗 Estructura del Proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/               # Assets estáticos
+│   ├── image.png         # Imagen principal
+│   └── favicon.svg       # Favicon
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/           # Recursos multimedia
+│   ├── components/       # Componentes reutilizables
+│   │   ├── BackgroundRadial/  # Efectos de fondo
+│   │   ├── ControlBilling/    # Sección de facturación
+│   │   ├── Footer/            # Pie de página
+│   │   ├── Header/            # Cabecera
+│   │   └── ...                # Más componentes
+│   ├── layouts/          # Layouts principales
+│   ├── pages/            # Páginas de la aplicación
+│   ├── styles/           # Estilos globales
+│   └── utils/            # Funciones utilitarias
+├── astro.config.mjs      # Configuración de Astro
+├── tsconfig.json         # Configuración de TypeScript
+└── package.json          # Dependencias del proyecto
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🌐 Despliegue
 
-## 🧞 Commands
+[![Vercel](https://img.shields.io/badge/Deployed_with-Vercel-000000.svg?logo=vercel)](https://vercel.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github)](https://github.com/tu-usuario/tu-repo)
 
-All commands are run from the root of the project, from a terminal:
+El proyecto está configurado para despliegue automático en Vercel:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+1. Haz push a tu repositorio GitHub
+2. Conecta tu repositorio en [Vercel](https://vercel.com)
+3. ¡Listo! El despliegue se realizará automáticamente
 
-## 👀 Want to learn more?
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tu-usuario/tu-repo)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📚 Tecnologías Utilizadas
+
+[![Astro](https://img.shields.io/badge/Astro-FF5D01.svg?logo=astro&logoColor=white)](https://astro.build)
+[![React](https://img.shields.io/badge/React-61DAFB.svg?logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4.svg?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF.svg?logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![Swiper](https://img.shields.io/badge/Swiper-6332F6.svg?logo=swiper&logoColor=white)](https://swiperjs.com)
+[![Bun](https://img.shields.io/badge/Bun-000000.svg?logo=bun&logoColor=white)](https://bun.sh)
+
+| Tecnología | Descripción |
+|------------|-------------|
+| [Astro](https://astro.build) | Framework web estático ultra-rápido |
+| [React](https://react.dev) | Biblioteca para componentes UI interactivos |
+| [TypeScript](https://www.typescriptlang.org) | JavaScript con tipado estático |
+| [Tailwind CSS](https://tailwindcss.com) | Framework CSS utility-first |
+| [Framer Motion](https://www.framer.com/motion/) | Biblioteca de animaciones fluidas |
+| [Swiper](https://swiperjs.com) | Carrusel interactivo moderno |
+| [Bun](https://bun.sh) | Runtime JavaScript ultra-rápido |
